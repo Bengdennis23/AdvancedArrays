@@ -15,13 +15,16 @@ console.log(hasThreeVowels('dog'));             //  false
 console.log(hasThreeVowels('go home'));         //  false
 
 */
-
-let hasThreeVowels = function(string) {
-    // Your code here 
-};
-
-// Your code here 
-
+function hasThreeVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const uniqueVowels = new Set(str.toLowerCase().split('').filter(char => vowels.includes(char)));
+    return uniqueVowels.size >= 3;
+}
+console.log(hasThreeVowels('delicious'));       //  true
+console.log(hasThreeVowels('bootcamp prep'));   //  true
+console.log(hasThreeVowels('bootcamp'));        //  false
+console.log(hasThreeVowels('dog'));             //  false
+console.log(hasThreeVowels('go home'));         //  false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
