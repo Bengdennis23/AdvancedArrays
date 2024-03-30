@@ -14,14 +14,14 @@ console.log(avgVal([])); // null
 */
 
 let avgVal = function (arr) {
-  if (arr.length === 0) return null; // Return null if array is empty
+  if (arr.length === 0) return null;
 
   let total = 0;
   arr.forEach(element => {
-    total += element; // Sum up all elements
+    total += element;
   });
 
-  return total / arr.length; // Return the average
+  return total / arr.length;
 };
 
 console.log(avgVal([5, 10])); // 7.5
