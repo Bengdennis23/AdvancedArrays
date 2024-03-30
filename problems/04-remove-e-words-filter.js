@@ -12,10 +12,14 @@ console.log(removeEWords('Enter the building')); // 'building'
 
 */
 
-let removeEWords = function(sentence) {
-    // Your code here 
+let removeEWords = function (sentence) {
+  let words = sentence.split(' ');
+  let filteredWords = words.filter(word => !word.includes('e'));
+  return filteredWords.join(' ');
 };
 
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
